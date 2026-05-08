@@ -1,0 +1,65 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/layout/MobileShell.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=73efb1fa"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/VSCODE/TS_Frontend_ATIVIDADE03/src/components/layout/MobileShell.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import { Outlet } from "/node_modules/.vite/deps/react-router-dom.js?v=73efb1fa";
+import { AppBar } from "/src/components/layout/AppBar.jsx";
+import { BottomNav } from "/src/components/layout/BottomNav.jsx";
+export function MobileShell() {
+  return /* @__PURE__ */ jsxDEV("div", { className: "app-frame", children: [
+    /* @__PURE__ */ jsxDEV(AppBar, {}, void 0, false, {
+      fileName: "D:/VSCODE/TS_Frontend_ATIVIDADE03/src/components/layout/MobileShell.jsx",
+      lineNumber: 27,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "app-scroll", children: /* @__PURE__ */ jsxDEV(Outlet, {}, void 0, false, {
+      fileName: "D:/VSCODE/TS_Frontend_ATIVIDADE03/src/components/layout/MobileShell.jsx",
+      lineNumber: 29,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "D:/VSCODE/TS_Frontend_ATIVIDADE03/src/components/layout/MobileShell.jsx",
+      lineNumber: 28,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(BottomNav, {}, void 0, false, {
+      fileName: "D:/VSCODE/TS_Frontend_ATIVIDADE03/src/components/layout/MobileShell.jsx",
+      lineNumber: 31,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/VSCODE/TS_Frontend_ATIVIDADE03/src/components/layout/MobileShell.jsx",
+    lineNumber: 26,
+    columnNumber: 5
+  }, this);
+}
+_c = MobileShell;
+var _c;
+$RefreshReg$(_c, "MobileShell");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/VSCODE/TS_Frontend_ATIVIDADE03/src/components/layout/MobileShell.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/VSCODE/TS_Frontend_ATIVIDADE03/src/components/layout/MobileShell.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBT007Ozs7Ozs7Ozs7Ozs7Ozs7QUFQTixTQUFTQSxjQUFjO0FBQ3ZCLFNBQVNDLGNBQWM7QUFDdkIsU0FBU0MsaUJBQWlCO0FBRW5CLGdCQUFTQyxjQUFjO0FBQzVCLFNBQ0UsdUJBQUMsU0FBSSxXQUFVLGFBQ2I7QUFBQSwyQkFBQyxZQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBTztBQUFBLElBQ1AsdUJBQUMsU0FBSSxXQUFVLGNBQ2IsaUNBQUMsWUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQU8sS0FEVDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBRUE7QUFBQSxJQUNBLHVCQUFDLGVBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFVO0FBQUEsT0FMWjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBTUE7QUFFSjtBQUFDQyxLQVZlRDtBQUFXLElBQUFDO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIk91dGxldCIsIkFwcEJhciIsIkJvdHRvbU5hdiIsIk1vYmlsZVNoZWxsIiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiTW9iaWxlU2hlbGwuanN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE91dGxldCB9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nO1xyXG5pbXBvcnQgeyBBcHBCYXIgfSBmcm9tICcuL0FwcEJhcic7XHJcbmltcG9ydCB7IEJvdHRvbU5hdiB9IGZyb20gJy4vQm90dG9tTmF2JztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBNb2JpbGVTaGVsbCgpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPGRpdiBjbGFzc05hbWU9XCJhcHAtZnJhbWVcIj5cclxuICAgICAgPEFwcEJhciAvPlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImFwcC1zY3JvbGxcIj5cclxuICAgICAgICA8T3V0bGV0IC8+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgICA8Qm90dG9tTmF2IC8+XHJcbiAgICA8L2Rpdj5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiRDovVlNDT0RFL1RTX0Zyb250ZW5kX0FUSVZJREFERTAzL3NyYy9jb21wb25lbnRzL2xheW91dC9Nb2JpbGVTaGVsbC5qc3gifQ==
