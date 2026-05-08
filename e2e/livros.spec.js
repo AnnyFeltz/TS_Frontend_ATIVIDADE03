@@ -1,53 +1,63 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Gerenciamento de Livros (E2E)', () => {
-  // test('deve permitir login e navegar para o dashboard', async ({ page }) => {
-  //   // 1. Vai para a página inicial (Login)
-  //   await page.goto('/livros');
+  test('deve permitir login e navegar para o dashboard', async ({ page }) => {
+    // 1. Vai para a página inicial (Login)
+    await page.goto('/livros');
 
-  //   // 2. Realiza o login (usando os dados do nosso mock de admin)
-  //   await page.fill('input[type="email"]', 'admin@sistema.com');
-  //   await page.fill('input[type="password"]', '123456');
-  //   await page.click('button[type="submit"]');
+    // 2. Realiza o login (usando os dados do nosso mock de admin)
+    await page.fill('input[type="email"]', 'admin@sistema.com');
+    await page.fill('input[type="password"]', '123456');
+    await page.click('button[type="submit"]');
 
-  //   // 3. Espera chegar no Dashboard (garante que logou)
-  //   await expect(page).toHaveURL(/\/dashboard|$/);
-  // });
-
-  test('deve navegar até a tela de livros e listar o acervo', async ({ page }) => {
-    // 1. Navega para livros a partir do menu ou via URL
-    await page.goto('/livros', { waitUntil: 'domcontentloaded' });
-
-    // 2. Verifica se o título da página está correto
-    await expect(page.locator('h2')).toContainText('Acervo de Livros');
+    // 3. Espera chegar no Dashboard (garante que logou)
+    await expect(page).toHaveURL(/\/dashboard|$/);
   });
 
-//   test('deve permitir adicionar um novo livro e encontrá-lo na lista', async ({ page }) => {
-//     const tituloAleatorio = `Livro E2E ${Math.floor(Math.random() * 1000)}`;
+  test.describe('Testes que precisam estar autenticados primeiro', () => {
+    test.beforeEach(async ({ page }) => {
+      await page.goto('/livros');
+      await page.fill('input[type="email"]', 'admin@sistema.com');
+      await page.fill('input[type="password"]', '123456');
+      await page.click('button[type="submit"]');
+      await expect(page).toHaveURL(/\/dashboard|$/);
+    });
+    
+    test('deve navegar até a tela de livros e listar o acervo', async ({ page }) => {
+      // 1. Navega para livros a partir do menu ou via URL
+      await page.goto('/livros/', { waitUntil: 'domcontentloaded' });
 
-//     await page.goto('/livros');
+      // 2. Verifica se o título da página está correto
+      await expect(page.locator('h2')).toContainText('Acervo de Livros');
+    });
 
-//     // 1. Clicar no FAB (+) para abrir o modal
-//     await page.locator('.fab').click();
+    test('deve permitir adicionar um novo livro e encontrá-lo na lista', async ({ page }) => {
+      const tituloAleatorio = `Livro E2E ${Math.floor(Math.random() * 1000)}`;
 
-//     // 2. Preencher o formulário no modal
-//     await page.fill('input[name="titulo"]', tituloAleatorio);
-//     await page.fill('input[name="autor"]', 'Automação Playwright');
+      await page.goto('/livros');
 
-//     // 3. Salvar
-//     await page.click('button[type="submit"]');
+      // 1. Clicar no FAB (+) para abrir o modal
+      await page.locator('.fab').click();
 
-//     // 4. Verificar se o novo livro aparece na lista
-//     await expect(page.getByText(tituloAleatorio)).toBeVisible();
-//   });
+      // 2. Preencher o formulário usando o Placeholder (já que não tem 'name')
+      await page.getByPlaceholder('Ex: Dom Casmurro').fill(tituloAleatorio);
+      await page.getByPlaceholder('Ex: Machado de Assis').fill('Automação Playwright');
 
-//   test('deve fechar o modal ao clicar no botão cancelar', async ({ page }) => {
-//     await page.goto('/livros');
+      // 3. Salvar clicando no botão "Confirmar"
+      await page.getByRole('button', { name: 'Confirmar' }).click();
 
-//     await page.locator('.fab').click();
-//     await expect(page.locator('.modal')).toBeVisible();
+      // 4. Verificar se o novo livro aparece na lista
+      await expect(page.getByText(tituloAleatorio)).toBeVisible({ timeout: 10000 });
+    });
 
-//     await page.click('button:has-text("Cancelar")');
-//     await expect(page.locator('.modal')).not.toBeVisible();
-//   });
+    test('deve fechar o modal ao clicar no botão cancelar', async ({ page }) => {
+      await page.goto('/livros');
+
+      await page.locator('.fab').click();
+      await expect(page.locator('.modal')).toBeVisible();
+
+      await page.click('button:has-text("Cancelar")');
+      await expect(page.locator('.modal')).not.toBeVisible();
+    });
+  });
 });

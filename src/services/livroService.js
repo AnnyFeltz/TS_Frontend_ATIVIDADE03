@@ -11,15 +11,15 @@ export async function obterLivro(id) {
 }
 
 export async function criarLivro(payload) {
-  const { data } = await api.post('/livros', payload);
+  const { data } = await api.post('/livros/criar', payload);
   return data;
 }
 
 export async function atualizarLivro(id, payload) {
-  const { data } = await api.put(`/livros/${id}`, payload);
+  const { data } = await api.patch(`/livros/atualizar/${id}`, payload); 
   return data;
 }
 
 export async function removerLivro(id) {
-  await api.delete(`/livros/${id}`);
+  await api.delete(`/livros/deletar/${id}`);
 }

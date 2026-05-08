@@ -67,7 +67,10 @@ export function LivrosPage() {
       if (editando) {
         await livroService.atualizarLivro(editando.id, form);
       } else {
-        await livroService.criarLivro(form);
+        await livroService.criarLivro({
+          ...form,
+          disponivel: true
+        });
       }
       setModalAberto(false);
       setErro('');
