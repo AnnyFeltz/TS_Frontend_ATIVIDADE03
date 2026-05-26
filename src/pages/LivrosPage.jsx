@@ -23,8 +23,6 @@ export function LivrosPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [confirmacao, setConfirmacao] = useState(null);
-
-  // Paginação
   const [paginaAtual, setPaginaAtual] = useState(1);
   const itensPorPagina = 5;
 

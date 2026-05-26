@@ -83,8 +83,6 @@ test.describe('Gerenciamento de Livros (E2E)', () => {
       
       // Valida se o modal abriu
       await expect(page.locator('.modal')).toBeVisible();
-      
-      // CORREÇÃO: '.mosal' alterado para '.modal' e clique usando o escopo correto
       await page.locator('.modal').getByRole('button', { name: 'Excluir' }).click();
 
       // Espera sumir e valida que o item foi removido
