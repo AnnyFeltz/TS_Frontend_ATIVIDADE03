@@ -11,7 +11,7 @@ export async function quitarMulta(id) {
 }
 
 export async function criarMulta(payload) {
-  const { data } = await api.post('/multas', payload);
+  const { data } = await api.post('/multas/criar', payload);
   return data;
 }
 

@@ -6,7 +6,7 @@ export async function listarEmprestimos() {
 }
 
 export async function criarEmprestimo(livro_id, usuario_id, data_devolucao_prevista) {
-  const { data } = await api.post('/emprestimos', { livro_id, usuario_id, data_devolucao_prevista });
+  const { data } = await api.post('/emprestimos/criar', { livro_id, usuario_id, data_devolucao_prevista });
   return data;
 }
 

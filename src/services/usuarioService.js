@@ -11,10 +11,10 @@ export async function criarUsuario(payload) {
 }
 
 export async function atualizarUsuario(id, payload) {
-  const { data } = await api.put(`/usuarios/${id}`, payload);
+  const { data } = await api.put(`/usuarios/atualizar/${id}`, payload);
   return data;
 }
 
 export async function deletarUsuario(id) {
-  await api.delete(`/usuarios/${id}`);
+  await api.delete(`/usuarios/deletar/${id}`);
 }
