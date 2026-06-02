@@ -6,7 +6,7 @@ export async function listarUsuarios() {
 }
 
 export async function criarUsuario(payload) {
-  const { data } = await api.post('/usuarios', payload);
+  const { data } = await api.post('/usuarios/criar', payload);
   return data;
 }
 
