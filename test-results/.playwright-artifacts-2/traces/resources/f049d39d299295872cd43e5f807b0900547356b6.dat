@@ -1,0 +1,143 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/routes/AppRoutes.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=9334b26d"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import { Routes, Route, Navigate } from "/node_modules/.vite/deps/react-router-dom.js?v=9334b26d";
+import { RequireAuth } from "/src/routes/RequireAuth.jsx";
+import { MobileShell } from "/src/components/layout/MobileShell.jsx";
+import { LoginPage } from "/src/pages/LoginPage.jsx";
+import { RegisterPage } from "/src/pages/RegisterPage.jsx";
+import { DashboardPage } from "/src/pages/DashboardPage.jsx";
+import { LivrosPage } from "/src/pages/LivrosPage.jsx";
+import { UsuariosPage } from "/src/pages/UsuariosPage.jsx";
+import { EmprestimosPage } from "/src/pages/EmprestimosPage.jsx";
+import { MultasPage } from "/src/pages/MultasPage.jsx";
+export function AppRoutes() {
+  return /* @__PURE__ */ jsxDEV(Routes, { children: [
+    /* @__PURE__ */ jsxDEV(Route, { path: "/login", element: /* @__PURE__ */ jsxDEV(LoginPage, {}, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 34,
+      columnNumber: 37
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 34,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "/cadastro", element: /* @__PURE__ */ jsxDEV(RegisterPage, {}, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 35,
+      columnNumber: 40
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 35,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { element: /* @__PURE__ */ jsxDEV(RequireAuth, {}, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 37,
+      columnNumber: 23
+    }, this), children: /* @__PURE__ */ jsxDEV(Route, { path: "/", element: /* @__PURE__ */ jsxDEV(MobileShell, {}, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 38,
+      columnNumber: 34
+    }, this), children: [
+      /* @__PURE__ */ jsxDEV(Route, { index: true, element: /* @__PURE__ */ jsxDEV(DashboardPage, {}, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 39,
+        columnNumber: 33
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 39,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV(Route, { path: "livros", element: /* @__PURE__ */ jsxDEV(LivrosPage, {}, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 40,
+        columnNumber: 41
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 40,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV(Route, { path: "emprestimos", element: /* @__PURE__ */ jsxDEV(EmprestimosPage, {}, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 41,
+        columnNumber: 46
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 41,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV(Route, { path: "multas", element: /* @__PURE__ */ jsxDEV(MultasPage, {}, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 42,
+        columnNumber: 41
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 42,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV(Route, { path: "usuarios", element: /* @__PURE__ */ jsxDEV(UsuariosPage, {}, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 43,
+        columnNumber: 43
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+        lineNumber: 43,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 38,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 37,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "*", element: /* @__PURE__ */ jsxDEV(Navigate, { to: "/", replace: true }, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 47,
+      columnNumber: 32
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+      lineNumber: 47,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx",
+    lineNumber: 33,
+    columnNumber: 5
+  }, this);
+}
+_c = AppRoutes;
+var _c;
+$RefreshReg$(_c, "AppRoutes");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/yasmi/Documents/GitHub/TS_Frontend_ATIVIDADE03/src/routes/AppRoutes.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBY29DOzs7Ozs7Ozs7Ozs7Ozs7O0FBZHBDLFNBQVNBLFFBQVFDLE9BQU9DLGdCQUFnQjtBQUN4QyxTQUFTQyxtQkFBbUI7QUFDNUIsU0FBU0MsbUJBQW1CO0FBQzVCLFNBQVNDLGlCQUFpQjtBQUMxQixTQUFTQyxvQkFBb0I7QUFDN0IsU0FBU0MscUJBQXFCO0FBQzlCLFNBQVNDLGtCQUFrQjtBQUMzQixTQUFTQyxvQkFBb0I7QUFDN0IsU0FBU0MsdUJBQXVCO0FBQ2hDLFNBQVNDLGtCQUFrQjtBQUVwQixnQkFBU0MsWUFBWTtBQUMxQixTQUNFLHVCQUFDLFVBQ0M7QUFBQSwyQkFBQyxTQUFNLE1BQUssVUFBUyxTQUFTLHVCQUFDLGVBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFVLEtBQXhDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBNEM7QUFBQSxJQUM1Qyx1QkFBQyxTQUFNLE1BQUssYUFBWSxTQUFTLHVCQUFDLGtCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBYSxLQUE5QztBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQWtEO0FBQUEsSUFFbEQsdUJBQUMsU0FBTSxTQUFTLHVCQUFDLGlCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBWSxHQUMxQixpQ0FBQyxTQUFNLE1BQUssS0FBSSxTQUFTLHVCQUFDLGlCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBWSxHQUNuQztBQUFBLDZCQUFDLFNBQU0sT0FBSyxNQUFDLFNBQVMsdUJBQUMsbUJBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFjLEtBQXBDO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBd0M7QUFBQSxNQUN4Qyx1QkFBQyxTQUFNLE1BQUssVUFBUyxTQUFTLHVCQUFDLGdCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBVyxLQUF6QztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQTZDO0FBQUEsTUFDN0MsdUJBQUMsU0FBTSxNQUFLLGVBQWMsU0FBUyx1QkFBQyxxQkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQWdCLEtBQW5EO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBdUQ7QUFBQSxNQUN2RCx1QkFBQyxTQUFNLE1BQUssVUFBUyxTQUFTLHVCQUFDLGdCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBVyxLQUF6QztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQTZDO0FBQUEsTUFDN0MsdUJBQUMsU0FBTSxNQUFLLFlBQVcsU0FBUyx1QkFBQyxrQkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQWEsS0FBN0M7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFpRDtBQUFBLFNBTG5EO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FNQSxLQVBGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FRQTtBQUFBLElBRUEsdUJBQUMsU0FBTSxNQUFLLEtBQUksU0FBUyx1QkFBQyxZQUFTLElBQUcsS0FBSSxTQUFPLFFBQXhCO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBd0IsS0FBakQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFxRDtBQUFBLE9BZHZEO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FlQTtBQUVKO0FBQUNDLEtBbkJlRDtBQUFTLElBQUFDO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIlJvdXRlcyIsIlJvdXRlIiwiTmF2aWdhdGUiLCJSZXF1aXJlQXV0aCIsIk1vYmlsZVNoZWxsIiwiTG9naW5QYWdlIiwiUmVnaXN0ZXJQYWdlIiwiRGFzaGJvYXJkUGFnZSIsIkxpdnJvc1BhZ2UiLCJVc3Vhcmlvc1BhZ2UiLCJFbXByZXN0aW1vc1BhZ2UiLCJNdWx0YXNQYWdlIiwiQXBwUm91dGVzIiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiQXBwUm91dGVzLmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBSb3V0ZXMsIFJvdXRlLCBOYXZpZ2F0ZSB9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nO1xyXG5pbXBvcnQgeyBSZXF1aXJlQXV0aCB9IGZyb20gJy4vUmVxdWlyZUF1dGgnO1xyXG5pbXBvcnQgeyBNb2JpbGVTaGVsbCB9IGZyb20gJy4uL2NvbXBvbmVudHMvbGF5b3V0L01vYmlsZVNoZWxsJztcclxuaW1wb3J0IHsgTG9naW5QYWdlIH0gZnJvbSAnLi4vcGFnZXMvTG9naW5QYWdlJztcclxuaW1wb3J0IHsgUmVnaXN0ZXJQYWdlIH0gZnJvbSAnLi4vcGFnZXMvUmVnaXN0ZXJQYWdlJztcclxuaW1wb3J0IHsgRGFzaGJvYXJkUGFnZSB9IGZyb20gJy4uL3BhZ2VzL0Rhc2hib2FyZFBhZ2UnO1xyXG5pbXBvcnQgeyBMaXZyb3NQYWdlIH0gZnJvbSAnLi4vcGFnZXMvTGl2cm9zUGFnZSc7XHJcbmltcG9ydCB7IFVzdWFyaW9zUGFnZSB9IGZyb20gJy4uL3BhZ2VzL1VzdWFyaW9zUGFnZSc7XHJcbmltcG9ydCB7IEVtcHJlc3RpbW9zUGFnZSB9IGZyb20gJy4uL3BhZ2VzL0VtcHJlc3RpbW9zUGFnZSc7XHJcbmltcG9ydCB7IE11bHRhc1BhZ2UgfSBmcm9tICcuLi9wYWdlcy9NdWx0YXNQYWdlJztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBBcHBSb3V0ZXMoKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxSb3V0ZXM+XHJcbiAgICAgIDxSb3V0ZSBwYXRoPVwiL2xvZ2luXCIgZWxlbWVudD17PExvZ2luUGFnZSAvPn0gLz5cclxuICAgICAgPFJvdXRlIHBhdGg9XCIvY2FkYXN0cm9cIiBlbGVtZW50PXs8UmVnaXN0ZXJQYWdlIC8+fSAvPlxyXG5cclxuICAgICAgPFJvdXRlIGVsZW1lbnQ9ezxSZXF1aXJlQXV0aCAvPn0+XHJcbiAgICAgICAgPFJvdXRlIHBhdGg9XCIvXCIgZWxlbWVudD17PE1vYmlsZVNoZWxsIC8+fT5cclxuICAgICAgICAgIDxSb3V0ZSBpbmRleCBlbGVtZW50PXs8RGFzaGJvYXJkUGFnZSAvPn0gLz5cclxuICAgICAgICAgIDxSb3V0ZSBwYXRoPVwibGl2cm9zXCIgZWxlbWVudD17PExpdnJvc1BhZ2UgLz59IC8+XHJcbiAgICAgICAgICA8Um91dGUgcGF0aD1cImVtcHJlc3RpbW9zXCIgZWxlbWVudD17PEVtcHJlc3RpbW9zUGFnZSAvPn0gLz5cclxuICAgICAgICAgIDxSb3V0ZSBwYXRoPVwibXVsdGFzXCIgZWxlbWVudD17PE11bHRhc1BhZ2UgLz59IC8+XHJcbiAgICAgICAgICA8Um91dGUgcGF0aD1cInVzdWFyaW9zXCIgZWxlbWVudD17PFVzdWFyaW9zUGFnZSAvPn0gLz5cclxuICAgICAgICA8L1JvdXRlPlxyXG4gICAgICA8L1JvdXRlPlxyXG5cclxuICAgICAgPFJvdXRlIHBhdGg9XCIqXCIgZWxlbWVudD17PE5hdmlnYXRlIHRvPVwiL1wiIHJlcGxhY2UgLz59IC8+XHJcbiAgICA8L1JvdXRlcz5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMveWFzbWkvRG9jdW1lbnRzL0dpdEh1Yi9UU19Gcm9udGVuZF9BVElWSURBREUwMy9zcmMvcm91dGVzL0FwcFJvdXRlcy5qc3gifQ==
