@@ -1,0 +1,30 @@
+{"version":8,"type":"context-options","origin":"testRunner","browserName":"","playwrightVersion":"1.59.1","options":{},"platform":"win32","wallTime":1781013410615,"monotonicTime":60619.694,"sdkLanguage":"javascript"}
+{"type":"before","callId":"hook@1","stepId":"hook@1","startTime":60621.253,"class":"Test","method":"hook","title":"Before Hooks","params":{},"stack":[]}
+{"type":"before","callId":"hook@2","stepId":"hook@2","parentId":"hook@1","startTime":60621.779,"class":"Test","method":"hook","title":"beforeEach hook","params":{},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":4,"column":8}]}
+{"type":"before","callId":"fixture@23","stepId":"fixture@23","parentId":"hook@2","startTime":60636.929,"class":"Test","method":"fixture","title":"Fixture \"context\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@24","stepId":"pw:api@24","parentId":"fixture@23","startTime":60637.917,"class":"Test","method":"pw:api","title":"Create context","params":{"selectorEngines":"[]","testIdAttributeName":"data-testid","acceptDownloads":"accept","bypassCSP":"false","colorScheme":"light","deviceScaleFactor":"1","hasTouch":"false","ignoreHTTPSErrors":"false","isMobile":"false","javaScriptEnabled":"true","locale":"en-US","offline":"false","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.7727.15 Safari/537.36","viewport":"Object","baseURL":"http://localhost:5173","serviceWorkers":"allow","noDefaultViewport":"false","extraHTTPHeaders":"undefined","storageState":"undefined","reducedMotion":"undefined","forcedColors":"undefined","contrast":"undefined","clientCertificates":"undefined"},"stack":[]}
+{"type":"after","callId":"pw:api@24","endTime":60641.776,"annotations":[]}
+{"type":"after","callId":"fixture@23","endTime":60643.842,"annotations":[]}
+{"type":"before","callId":"fixture@25","stepId":"fixture@25","parentId":"hook@2","startTime":60644.513,"class":"Test","method":"fixture","title":"Fixture \"page\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@26","stepId":"pw:api@26","parentId":"fixture@25","startTime":60647.137,"class":"Test","method":"pw:api","title":"Create page","params":{},"stack":[]}
+{"type":"after","callId":"pw:api@26","endTime":60716.047,"annotations":[]}
+{"type":"after","callId":"fixture@25","endTime":60716.321,"annotations":[]}
+{"type":"before","callId":"pw:api@27","stepId":"pw:api@27","parentId":"hook@2","startTime":60718.56,"class":"Test","method":"pw:api","title":"Navigate to \"/\"","params":{"url":"/","waitUntil":"load","timeout":"0"},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":5,"column":16}]}
+{"type":"after","callId":"pw:api@27","endTime":61081.757,"annotations":[]}
+{"type":"before","callId":"pw:api@28","stepId":"pw:api@28","parentId":"hook@2","startTime":61084.229,"class":"Test","method":"pw:api","title":"Fill \"admin@sistema.com\" locator('input[type=\"email\"]')","params":{"selector":"input[type=\"email\"]","value":"admin@sistema.com","timeout":"0"},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":7,"column":16}]}
+{"type":"after","callId":"pw:api@28","endTime":61189.426,"annotations":[]}
+{"type":"before","callId":"pw:api@29","stepId":"pw:api@29","parentId":"hook@2","startTime":61191.808,"class":"Test","method":"pw:api","title":"Fill \"123456\" locator('input[type=\"password\"]')","params":{"selector":"input[type=\"password\"]","value":"123456","timeout":"0"},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":8,"column":16}]}
+{"type":"after","callId":"pw:api@29","endTime":61217.32,"annotations":[]}
+{"type":"before","callId":"pw:api@30","stepId":"pw:api@30","parentId":"hook@2","startTime":61219.51,"class":"Test","method":"pw:api","title":"Click locator('button[type=\"submit\"]')","params":{"selector":"button[type=\"submit\"]","timeout":"0"},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":9,"column":16}]}
+{"type":"after","callId":"pw:api@30","endTime":61357.748,"annotations":[]}
+{"type":"before","callId":"expect@31","stepId":"expect@31","parentId":"hook@2","startTime":61360.856,"class":"Test","method":"expect","title":"Expect \"toHaveURL\"","params":{"expected":"Object"},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":11,"column":24}]}
+{"type":"after","callId":"expect@31","endTime":61374.349,"annotations":[]}
+{"type":"after","callId":"hook@2","endTime":61374.561,"annotations":[]}
+{"type":"after","callId":"hook@1","endTime":61374.733,"annotations":[]}
+{"type":"before","callId":"pw:api@32","stepId":"pw:api@32","startTime":61377.401,"class":"Test","method":"pw:api","title":"Navigate to \"/multas\"","params":{"url":"/multas","waitUntil":"load","timeout":"0"},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":33,"column":16}]}
+{"type":"after","callId":"pw:api@32","endTime":61620.359,"annotations":[]}
+{"type":"before","callId":"pw:api@33","stepId":"pw:api@33","startTime":61622.667,"class":"Test","method":"pw:api","title":"Click locator('.fab')","params":{"selector":".fab","strict":"true","timeout":"0"},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":35,"column":32}]}
+{"type":"after","callId":"pw:api@33","endTime":61728.044,"annotations":[]}
+{"type":"before","callId":"expect@34","stepId":"expect@34","startTime":61729.664,"class":"Test","method":"expect","title":"Expect \"toBeVisible\"","params":{},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":37,"column":42}]}
+{"type":"after","callId":"expect@34","endTime":61747.309,"annotations":[]}
+{"type":"before","callId":"pw:api@35","stepId":"pw:api@35","startTime":61751.35,"class":"Test","method":"pw:api","title":"Select option locator('select[name=\"emprestimo_id\"]')","params":{"selector":"select[name=\"emprestimo_id\"]","options":"[Object]","timeout":"0"},"stack":[{"file":"E:\\VSCODE\\TS_Frontend_ATIVIDADE03\\e2e\\multas.spec.js","line":39,"column":16}]}

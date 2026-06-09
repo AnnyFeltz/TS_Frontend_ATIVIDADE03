@@ -1,0 +1,67 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/context/ThemeContext.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=cd6af314"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("E:/VSCODE/TS_Frontend_ATIVIDADE03/src/context/ThemeContext.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=cd6af314"; const createContext = __vite__cjsImport3_react["createContext"]; const useContext = __vite__cjsImport3_react["useContext"]; const useEffect = __vite__cjsImport3_react["useEffect"]; const useState = __vite__cjsImport3_react["useState"]; const useMemo = __vite__cjsImport3_react["useMemo"];
+const ThemeContext = createContext(null);
+export function ThemeProvider({ children }) {
+  _s();
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+  const toggleTheme = () => {
+    setTheme((prev) => prev === "light" ? "dark" : "light");
+  };
+  const value = useMemo(() => ({ theme, toggleTheme }), [theme]);
+  return /* @__PURE__ */ jsxDEV(ThemeContext.Provider, { value, children }, void 0, false, {
+    fileName: "E:/VSCODE/TS_Frontend_ATIVIDADE03/src/context/ThemeContext.jsx",
+    lineNumber: 42,
+    columnNumber: 10
+  }, this);
+}
+_s(ThemeProvider, "aNM7GNNY2d//sTqO6b7gRCxmP7A=");
+_c = ThemeProvider;
+export function useTheme() {
+  _s2();
+  const context = useContext(ThemeContext);
+  if (!context) throw new Error("useTheme must be used within a ThemeProvider");
+  return context;
+}
+_s2(useTheme, "b9L3QQ+jgeyIrH0NfHrJ8nn7VMU=");
+var _c;
+$RefreshReg$(_c, "ThemeProvider");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("E:/VSCODE/TS_Frontend_ATIVIDADE03/src/context/ThemeContext.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("E:/VSCODE/TS_Frontend_ATIVIDADE03/src/context/ThemeContext.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBc0JTOzs7Ozs7Ozs7Ozs7Ozs7OztBQXRCVCxTQUFTQSxlQUFlQyxZQUFZQyxXQUFXQyxVQUFVQyxlQUFlO0FBRXhFLE1BQU1DLGVBQWVMLGNBQWMsSUFBSTtBQUVoQyxnQkFBU00sY0FBYyxFQUFFQyxTQUFTLEdBQUc7QUFBQUMsS0FBQTtBQUMxQyxRQUFNLENBQUNDLE9BQU9DLFFBQVEsSUFBSVAsU0FBUyxNQUFNO0FBQ3ZDLFdBQU9RLGFBQWFDLFFBQVEsT0FBTyxLQUFLO0FBQUEsRUFDMUMsQ0FBQztBQUVEVixZQUFVLE1BQU07QUFDZCxVQUFNVyxPQUFPQyxPQUFPQyxTQUFTQztBQUM3QkgsU0FBS0ksVUFBVUMsT0FBTyxTQUFTLE1BQU07QUFDckNMLFNBQUtJLFVBQVVFLElBQUlWLEtBQUs7QUFDeEJFLGlCQUFhUyxRQUFRLFNBQVNYLEtBQUs7QUFBQSxFQUNyQyxHQUFHLENBQUNBLEtBQUssQ0FBQztBQUVWLFFBQU1ZLGNBQWNBLE1BQU07QUFDeEJYLGFBQVMsQ0FBQ1ksU0FBVUEsU0FBUyxVQUFVLFNBQVMsT0FBUTtBQUFBLEVBQzFEO0FBRUEsUUFBTUMsUUFBUW5CLFFBQVEsT0FBTyxFQUFFSyxPQUFPWSxZQUFZLElBQUksQ0FBQ1osS0FBSyxDQUFDO0FBRTdELFNBQU8sdUJBQUMsYUFBYSxVQUFiLEVBQXNCLE9BQWVGLFlBQXRDO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FBK0M7QUFDeEQ7QUFBQ0MsR0FuQmVGLGVBQWE7QUFBQSxLQUFiQTtBQXFCVCxnQkFBU2tCLFdBQVc7QUFBQUMsTUFBQTtBQUN6QixRQUFNQyxVQUFVekIsV0FBV0ksWUFBWTtBQUN2QyxNQUFJLENBQUNxQixRQUFTLE9BQU0sSUFBSUMsTUFBTSw4Q0FBOEM7QUFDNUUsU0FBT0Q7QUFDVDtBQUFDRCxJQUplRCxVQUFRO0FBQUEsSUFBQUk7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsiY3JlYXRlQ29udGV4dCIsInVzZUNvbnRleHQiLCJ1c2VFZmZlY3QiLCJ1c2VTdGF0ZSIsInVzZU1lbW8iLCJUaGVtZUNvbnRleHQiLCJUaGVtZVByb3ZpZGVyIiwiY2hpbGRyZW4iLCJfcyIsInRoZW1lIiwic2V0VGhlbWUiLCJsb2NhbFN0b3JhZ2UiLCJnZXRJdGVtIiwicm9vdCIsIndpbmRvdyIsImRvY3VtZW50IiwiZG9jdW1lbnRFbGVtZW50IiwiY2xhc3NMaXN0IiwicmVtb3ZlIiwiYWRkIiwic2V0SXRlbSIsInRvZ2dsZVRoZW1lIiwicHJldiIsInZhbHVlIiwidXNlVGhlbWUiLCJfczIiLCJjb250ZXh0IiwiRXJyb3IiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJUaGVtZUNvbnRleHQuanN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNyZWF0ZUNvbnRleHQsIHVzZUNvbnRleHQsIHVzZUVmZmVjdCwgdXNlU3RhdGUsIHVzZU1lbW8gfSBmcm9tICdyZWFjdCc7XHJcblxyXG5jb25zdCBUaGVtZUNvbnRleHQgPSBjcmVhdGVDb250ZXh0KG51bGwpO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFRoZW1lUHJvdmlkZXIoeyBjaGlsZHJlbiB9KSB7XHJcbiAgY29uc3QgW3RoZW1lLCBzZXRUaGVtZV0gPSB1c2VTdGF0ZSgoKSA9PiB7XHJcbiAgICByZXR1cm4gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3RoZW1lJykgfHwgJ2xpZ2h0JztcclxuICB9KTtcclxuXHJcbiAgdXNlRWZmZWN0KCgpID0+IHtcclxuICAgIGNvbnN0IHJvb3QgPSB3aW5kb3cuZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50O1xyXG4gICAgcm9vdC5jbGFzc0xpc3QucmVtb3ZlKCdsaWdodCcsICdkYXJrJyk7XHJcbiAgICByb290LmNsYXNzTGlzdC5hZGQodGhlbWUpO1xyXG4gICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3RoZW1lJywgdGhlbWUpO1xyXG4gIH0sIFt0aGVtZV0pO1xyXG5cclxuICBjb25zdCB0b2dnbGVUaGVtZSA9ICgpID0+IHtcclxuICAgIHNldFRoZW1lKChwcmV2KSA9PiAocHJldiA9PT0gJ2xpZ2h0JyA/ICdkYXJrJyA6ICdsaWdodCcpKTtcclxuICB9O1xyXG5cclxuICBjb25zdCB2YWx1ZSA9IHVzZU1lbW8oKCkgPT4gKHsgdGhlbWUsIHRvZ2dsZVRoZW1lIH0pLCBbdGhlbWVdKTtcclxuXHJcbiAgcmV0dXJuIDxUaGVtZUNvbnRleHQuUHJvdmlkZXIgdmFsdWU9e3ZhbHVlfT57Y2hpbGRyZW59PC9UaGVtZUNvbnRleHQuUHJvdmlkZXI+O1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gdXNlVGhlbWUoKSB7XHJcbiAgY29uc3QgY29udGV4dCA9IHVzZUNvbnRleHQoVGhlbWVDb250ZXh0KTtcclxuICBpZiAoIWNvbnRleHQpIHRocm93IG5ldyBFcnJvcigndXNlVGhlbWUgbXVzdCBiZSB1c2VkIHdpdGhpbiBhIFRoZW1lUHJvdmlkZXInKTtcclxuICByZXR1cm4gY29udGV4dDtcclxufVxyXG4iXSwiZmlsZSI6IkU6L1ZTQ09ERS9UU19Gcm9udGVuZF9BVElWSURBREUwMy9zcmMvY29udGV4dC9UaGVtZUNvbnRleHQuanN4In0=

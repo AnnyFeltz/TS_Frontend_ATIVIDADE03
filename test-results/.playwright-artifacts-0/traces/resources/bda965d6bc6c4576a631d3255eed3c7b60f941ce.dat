@@ -1,0 +1,58 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/routes/RequireAuth.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=cd6af314"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("E:/VSCODE/TS_Frontend_ATIVIDADE03/src/routes/RequireAuth.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import { Navigate, Outlet, useLocation } from "/node_modules/.vite/deps/react-router-dom.js?v=cd6af314";
+import { useAuth } from "/src/context/AuthContext.jsx";
+export function RequireAuth() {
+  _s();
+  const { isAuthenticated } = useAuth();
+  const location = useLocation();
+  if (!isAuthenticated) {
+    return /* @__PURE__ */ jsxDEV(Navigate, { to: "/login", state: { from: location }, replace: true }, void 0, false, {
+      fileName: "E:/VSCODE/TS_Frontend_ATIVIDADE03/src/routes/RequireAuth.jsx",
+      lineNumber: 28,
+      columnNumber: 12
+    }, this);
+  }
+  return /* @__PURE__ */ jsxDEV(Outlet, {}, void 0, false, {
+    fileName: "E:/VSCODE/TS_Frontend_ATIVIDADE03/src/routes/RequireAuth.jsx",
+    lineNumber: 31,
+    columnNumber: 10
+  }, this);
+}
+_s(RequireAuth, "oPfn0eV1Tq/jGSTz8yDTCwvSJ2g=", false, function() {
+  return [useAuth, useLocation];
+});
+_c = RequireAuth;
+var _c;
+$RefreshReg$(_c, "RequireAuth");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("E:/VSCODE/TS_Frontend_ATIVIDADE03/src/routes/RequireAuth.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("E:/VSCODE/TS_Frontend_ATIVIDADE03/src/routes/RequireAuth.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBUVc7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBUlgsU0FBU0EsVUFBVUMsUUFBUUMsbUJBQW1CO0FBQzlDLFNBQVNDLGVBQWU7QUFFakIsZ0JBQVNDLGNBQWM7QUFBQUMsS0FBQTtBQUM1QixRQUFNLEVBQUVDLGdCQUFnQixJQUFJSCxRQUFRO0FBQ3BDLFFBQU1JLFdBQVdMLFlBQVk7QUFFN0IsTUFBSSxDQUFDSSxpQkFBaUI7QUFDcEIsV0FBTyx1QkFBQyxZQUFTLElBQUcsVUFBUyxPQUFPLEVBQUVFLE1BQU1ELFNBQVMsR0FBRyxTQUFPLFFBQXhEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBd0Q7QUFBQSxFQUNqRTtBQUVBLFNBQU8sdUJBQUMsWUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBQU87QUFDaEI7QUFBQ0YsR0FUZUQsYUFBVztBQUFBLFVBQ0dELFNBQ1hELFdBQVc7QUFBQTtBQUFBLEtBRmRFO0FBQVcsSUFBQUs7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsiTmF2aWdhdGUiLCJPdXRsZXQiLCJ1c2VMb2NhdGlvbiIsInVzZUF1dGgiLCJSZXF1aXJlQXV0aCIsIl9zIiwiaXNBdXRoZW50aWNhdGVkIiwibG9jYXRpb24iLCJmcm9tIiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiUmVxdWlyZUF1dGguanN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5hdmlnYXRlLCBPdXRsZXQsIHVzZUxvY2F0aW9uIH0gZnJvbSAncmVhY3Qtcm91dGVyLWRvbSc7XHJcbmltcG9ydCB7IHVzZUF1dGggfSBmcm9tICcuLi9jb250ZXh0L0F1dGhDb250ZXh0JztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBSZXF1aXJlQXV0aCgpIHtcclxuICBjb25zdCB7IGlzQXV0aGVudGljYXRlZCB9ID0gdXNlQXV0aCgpO1xyXG4gIGNvbnN0IGxvY2F0aW9uID0gdXNlTG9jYXRpb24oKTtcclxuXHJcbiAgaWYgKCFpc0F1dGhlbnRpY2F0ZWQpIHtcclxuICAgIHJldHVybiA8TmF2aWdhdGUgdG89XCIvbG9naW5cIiBzdGF0ZT17eyBmcm9tOiBsb2NhdGlvbiB9fSByZXBsYWNlIC8+O1xyXG4gIH1cclxuXHJcbiAgcmV0dXJuIDxPdXRsZXQgLz47XHJcbn1cclxuIl0sImZpbGUiOiJFOi9WU0NPREUvVFNfRnJvbnRlbmRfQVRJVklEQURFMDMvc3JjL3JvdXRlcy9SZXF1aXJlQXV0aC5qc3gifQ==

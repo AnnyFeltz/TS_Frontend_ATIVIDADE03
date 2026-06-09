@@ -16,10 +16,10 @@ export async function criarMulta(payload) {
 }
 
 export async function deletarMulta(id) {
-  await api.delete(`/multas/${id}`);
+  await api.delete(`/multas/deletar/${id}`);
 }
 
 export async function atualizarMulta(id, payload) {
-  const { data } = await api.patch(`/multas/${id}`, payload);
+  const { data } = await api.patch(`/multas/atualizar/${id}`, payload);
   return data;
 }
