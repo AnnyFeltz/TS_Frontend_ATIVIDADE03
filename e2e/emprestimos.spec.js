@@ -42,7 +42,7 @@ test.describe('Gerenciamento de Empréstimos (E2E)', () => {
 
     await page.selectOption('select[name="livro_id"]', { index: 1 });
 
-    await page.selectOption('select[name="usuario_id"]', { index: 1 });
+    await page.selectOption('select[name="usuario_id"]', { index: 2 });
 
     const data = new Date();
     data.setDate(data.getDate() + 7);
@@ -95,7 +95,7 @@ test.describe('Gerenciamento de Empréstimos (E2E)', () => {
     const responsePromise = page.waitForResponse(
       resp =>
         resp.url().includes('/emprestimos') &&
-        resp.request().method() === 'PUT' &&
+        resp.request().method() === 'PATCH' &&
         resp.status() >= 200 &&
         resp.status() < 300
     );

@@ -20,6 +20,6 @@ export async function deletarMulta(id) {
 }
 
 export async function atualizarMulta(id, payload) {
-  const { data } = await api.put(`/multas/${id}`, payload);
+  const { data } = await api.patch(`/multas/${id}`, payload);
   return data;
 }

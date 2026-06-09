@@ -11,7 +11,7 @@ export async function criarUsuario(payload) {
 }
 
 export async function atualizarUsuario(id, payload) {
-  const { data } = await api.put(`/usuarios/atualizar/${id}`, payload);
+  const { data } = await api.patch(`/usuarios/atualizar/${id}`, payload);
   return data;
 }
 

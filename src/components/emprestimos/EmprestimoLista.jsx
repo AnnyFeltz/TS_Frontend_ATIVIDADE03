@@ -1,4 +1,4 @@
-function fmt(d) {
+ function fmt(d) {
   if (!d) return '—';
   return new Date(d).toLocaleString('pt-BR', {
     day: '2-digit',

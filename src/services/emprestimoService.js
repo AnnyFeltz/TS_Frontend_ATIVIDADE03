@@ -11,17 +11,17 @@ export async function criarEmprestimo(livro_id, usuario_id, data_devolucao_previ
 }
 
 export async function atualizarEmprestimo(id, payload) {
-  const { data } = await api.put(`/emprestimos/${id}`, payload);
+  const { data } = await api.patch(`/emprestimos/atualizar/${id}`, payload);
   return data;
 }
 
 export async function deletarEmprestimo(id) {
-  await api.delete(`/emprestimos/${id}`);
+  await api.delete(`/emprestimos/deletar/${id}`);
 }
 
 export async function registrarDevolucao(emprestimoId) {
   // Ajustando conforme a API observada que usa data_devolucao no PUT
   const hoje = new Date().toISOString();
-  const { data } = await api.put(`/emprestimos/${emprestimoId}`, { data_devolucao: hoje });
+  const { data } = await api.put(`/emprestimos/devolver/${emprestimoId}`, { data_devolucao: hoje });
   return data;
 }
